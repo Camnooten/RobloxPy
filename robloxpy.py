@@ -19,7 +19,7 @@ class User:
         res = r.json()['Id']
         return res
     def does_user_exist(username):
-        url = "https://www.roblox.com/UserCheck/DoesUsernameExist?username=" + username
+        url = "https://auth.roblox.com/v1/usernames/validate?birthday=9999-06-08T22:00:00.000Z&context=Signup&username=" + username
         r = requests.get(url)
         res = r.json()['success']
         return res
